@@ -80,6 +80,13 @@ body{
   gap:20px;
 }
 
+.hero-buttons a{
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
 .primary-btn,
 .secondary-btn{
   padding:16px 28px;
