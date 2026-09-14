@@ -5,17 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Industrial Automation Solutions</title>
 
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FBXKZP00XP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FBXKZP00XP');
+</script>
+
 <body>
 
   <header class="hero">
 
     
     <nav class="navbar">
-      <div class="logo">SFA PKG</div>
+      <a href="index.html" class="logo"> 
+  <img src="img/sfa-packaging.png" alt="SFA Packaging"> <span class="tag">AUTOMATIZACIÓN INDUSTRIAL</span>
+</a>
 
       <ul>
         <li><a href="#about">Nosotros</a></li>
@@ -27,8 +39,7 @@
     </nav>
 
     <div class="hero-content">
-      <span class="tag">AUTOMATIZACIÓN INDUSTRIAL</span>
-
+    
       <h1>
         Ingeniería e Integración
         de Líneas de Producción
@@ -222,11 +233,21 @@
 
   </section>
 
-  <footer>
-    <p>© 2026 Industrial Automation Solutions</p>
-  </footer>
+  <footer> <p>© 2026 Industrial Automation Solutions</p> </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
+
+<div id="welcomeToast" class="welcome-toast">
+  <div class="toast-icon">✦</div>
+
+  <div class="toast-content">
+    <strong>Estamos trabajando en nuestra página</strong>
+    <span>Muy pronto encontrarás nuevas secciones y contenido.</span>
+  </div>
+
+  <button onclick="cerrarToast()" aria-label="Cerrar">×</button>
+</div>
+
 </html>
