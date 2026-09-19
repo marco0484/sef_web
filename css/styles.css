@@ -902,86 +902,126 @@ footer {
   /* ---------- Base ---------- */
 
   section {
-    padding: 65px 6%;
+    padding: 50px 6%;
   }
 
   /* ---------- Navbar ---------- */
 
   .navbar {
-    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
   }
 
   .logo {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
   }
 
   .logo img {
-    width: 100px;
+    width: 85px;
   }
 
   .tag {
-    padding: 7px 13px;
-    font-size: 10px;
+    padding: 6px 10px;
+    font-size: 9px;
+    white-space: nowrap;
   }
 
   .navbar ul {
-    gap: 14px;
+    width: 100%;
+    display: flex;
+    gap: 22px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    padding: 3px 4px 8px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar ul li {
+    flex: 0 0 auto;
   }
 
   .navbar a {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  .navbar ul a::after {
+    bottom: -5px;
   }
 
   /* ---------- Hero ---------- */
 
   .hero {
-    padding: 22px 6% 55px;
+    padding: 20px 6% 50px;
   }
 
   .hero-content {
-    margin-top: 55px;
+    margin-top: 45px;
   }
 
   .hero h1 {
-    font-size: 38px;
-    line-height: 1.02;
+    font-size: 36px;
+    line-height: 1.03;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
   }
 
   .hero p {
-    font-size: 15px;
-    line-height: 1.65;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+    margin-top: 20px;
   }
 
   .hero-buttons a {
     width: 100%;
+    min-height: 46px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 20px;
+    font-size: 13px;
   }
 
   .segmentos-img {
-    margin-top: 40px;
+    margin-top: 32px;
     border-radius: 10px;
   }
 
   /* ---------- Section titles ---------- */
 
   .section-title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .section-title span {
-    font-size: 11px;
-    letter-spacing: 1.5px;
+    font-size: 10px;
+    letter-spacing: 1.4px;
   }
 
   .section-title h2 {
-    margin-top: 7px;
-    font-size: 25px;
-    line-height: 1.2;
+    margin-top: 6px;
+    font-size: 24px;
+    line-height: 1.18;
     letter-spacing: -0.4px;
   }
 
@@ -989,103 +1029,114 @@ footer {
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
 
   .about-card {
-    padding: 25px 20px;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .about-card h3 {
+    margin-bottom: 9px;
+    font-size: 18px;
+  }
+
+  .about-card p {
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   /* ---------- Mission / Vision ---------- */
 
   .mission-vision {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 65px 6%;
+    gap: 12px;
+    padding: 50px 6%;
   }
 
   .mv-card {
-    padding: 28px 22px;
-    border-radius: 16px;
+    padding: 22px 18px;
+    border-radius: 14px;
   }
 
   .mv-card span {
-    font-size: 11px;
-    letter-spacing: 1.5px;
+    font-size: 10px;
+    letter-spacing: 1.4px;
   }
 
   .mv-card h2 {
-    margin: 12px 0;
-    font-size: 23px;
-    line-height: 1.2;
+    margin: 9px 0;
+    font-size: 21px;
+    line-height: 1.18;
   }
 
   .mv-card p {
-    font-size: 14px;
-    line-height: 1.65;
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   /* ---------- Services ---------- */
 
   .services {
-    padding: 65px 6%;
+    padding: 50px 6%;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 10px;
   }
 
   .service-card {
-    min-height: auto;
-    padding: 23px 20px;
-    border-radius: 15px;
+    min-height: 0;
+    padding: 18px;
+    border-radius: 13px;
   }
 
   .number {
-    margin-bottom: 14px;
-    font-size: 32px;
+    margin-bottom: 9px;
+    font-size: 27px;
   }
 
   .service-card h3 {
-    margin-bottom: 8px;
-    font-size: 18px;
+    margin-bottom: 5px;
+    font-size: 17px;
   }
 
   .service-card p {
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 12.5px;
+    line-height: 1.5;
   }
 
   /* ---------- Values ---------- */
 
   .values {
-    padding: 65px 6%;
+    padding: 50px 6%;
   }
 
   .values-container {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 9px;
   }
 
   .value-item {
-    padding: 20px 16px;
-    border-radius: 14px;
+    padding: 15px 14px;
+    border-radius: 12px;
   }
 
   .value-item h3 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   /* ---------- Brands ---------- */
 
   .brands {
-    padding: 65px 0;
+    padding: 55px 0;
   }
 
   .brands .section-title {
     padding: 0 6%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .brands-group {
@@ -1104,75 +1155,82 @@ footer {
     max-height: 55px;
   }
 
-  /* ---------- CTA ---------- */
+  /* ---------- CTA / Contact ---------- */
 
   .cta {
-    padding: 70px 6%;
+    padding: 55px 6%;
   }
 
   .cta h2 {
-    margin-bottom: 15px;
-    font-size: 30px;
+    margin-bottom: 10px;
+    font-size: 26px;
     line-height: 1.1;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.6px;
   }
 
   .cta > p {
-    margin-bottom: 25px;
-    font-size: 14px;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   .contact-options {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 25px;
+    gap: 10px;
+    margin-top: 18px;
   }
 
   .contact-card {
-    gap: 14px;
-    padding: 18px;
-    border-radius: 14px;
+    min-height: 0;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
   }
 
   .contact-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 12px;
-    font-size: 21px;
-  }
-
-  .contact-content h3 {
-    margin-bottom: 4px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     font-size: 17px;
   }
 
+  .contact-content h3 {
+    margin-bottom: 2px;
+    font-size: 15px;
+  }
+
   .contact-content p {
-    font-size: 12px;
-    line-height: 1.4;
+    font-size: 11px;
+    line-height: 1.3;
   }
 
   /* ---------- Toast ---------- */
 
   .welcome-toast {
-    bottom: 20px;
-    padding: 14px;
+    bottom: 18px;
+    padding: 12px;
+  }
+
+  .toast-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
   }
 
   .toast-content strong {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .toast-content span {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   /* ---------- Footer ---------- */
 
   footer {
-    padding: 25px 20px;
+    padding: 22px 18px;
+    font-size: 12px;
   }
-
 }
 
 /* =========================================================
