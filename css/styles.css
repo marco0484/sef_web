@@ -1,6 +1,11 @@
 /* =========================================================
    SFA PACKAGING
    INDUSTRIAL AUTOMATION
+   Clean stylesheet
+   ========================================================= */
+
+/* =========================================================
+   RESET / BASE
    ========================================================= */
 
 * {
@@ -14,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: #f4f7fb;
   color: #17212b;
   overflow-x: hidden;
@@ -28,47 +33,37 @@ body {
   position: relative;
   min-height: 100vh;
   padding: 28px 6% 70px;
+  overflow: hidden;
+  color: #fff;
 
   background:
     radial-gradient(circle at 80% 20%, rgba(0, 179, 255, 0.10), transparent 30%),
     linear-gradient(135deg, #06111f 0%, #091a2d 55%, #06101d 100%);
-
-  color: white;
-  overflow: hidden;
 }
 
-/* brillo decorativo */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-
-  top: -250px;
-  right: -150px;
-
-  background: rgba(0, 179, 255, 0.08);
-  border-radius: 50%;
-
-  filter: blur(80px);
-  pointer-events: none;
-}
-
+.hero::before,
 .hero::after {
   content: "";
   position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.hero::before {
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  right: -150px;
+  background: rgba(0, 179, 255, 0.08);
+}
+
+.hero::after {
   width: 400px;
   height: 400px;
-
   bottom: -250px;
   left: -150px;
-
   background: rgba(0, 104, 255, 0.08);
-  border-radius: 50%;
-
-  filter: blur(80px);
-  pointer-events: none;
 }
 
 /* =========================================================
@@ -81,19 +76,17 @@ body {
 
   max-width: 1450px;
   margin: 0 auto;
+  padding: 8px 0;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  padding: 8px 0;
+  justify-content: space-between;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 15px;
-
   text-decoration: none;
 }
 
@@ -104,13 +97,13 @@ body {
 }
 
 .tag {
-  background: rgba(0, 179, 255, 0.12);
-  color: #28c5ff;
-
   padding: 9px 17px;
 
   border: 1px solid rgba(0, 179, 255, 0.18);
   border-radius: 999px;
+
+  background: rgba(0, 179, 255, 0.12);
+  color: #28c5ff;
 
   font-size: 12px;
   font-weight: 600;
@@ -123,17 +116,14 @@ body {
   display: flex;
   align-items: center;
   gap: 34px;
-
   list-style: none;
 }
 
 .navbar a {
   color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
-
   font-size: 14px;
   font-weight: 500;
-
   transition: 0.3s ease;
 }
 
@@ -143,7 +133,6 @@ body {
 
 .navbar ul a::after {
   content: "";
-
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -152,12 +141,11 @@ body {
   height: 2px;
 
   background: #00b3ff;
-
   transition: 0.3s ease;
 }
 
 .navbar ul a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .navbar ul a:hover::after {
@@ -182,62 +170,53 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(42px, 5vw, 72px);
-  line-height: 0.98;
-
-  letter-spacing: -2px;
-
   margin: 0 0 28px;
 
+  color: #fff;
+  font-size: clamp(42px, 5vw, 72px);
   font-weight: 800;
-
-  color: #ffffff;
+  line-height: 0.98;
+  letter-spacing: -2px;
 }
 
 .hero p {
-  font-size: 18px;
-  line-height: 1.75;
-
   max-width: 850px;
+  margin-bottom: 35px;
 
   color: #cbd7e3;
-
-  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 /* =========================================================
-   BOTONES
+   HERO BUTTONS
    ========================================================= */
 
 .hero-buttons {
-  margin-top: 30px;
-
   display: flex;
   align-items: center;
-  gap: 15px;
-
   flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .hero-buttons a {
-  text-decoration: none;
+  min-height: 52px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  min-height: 52px;
+  text-decoration: none;
 }
 
 .primary-btn,
 .secondary-btn {
   padding: 15px 27px;
-
   border-radius: 10px;
 
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
 
   transition:
@@ -247,63 +226,45 @@ body {
 }
 
 .primary-btn {
-  background: linear-gradient(
-    135deg,
-    #00b3ff,
-    #007dcc
-  );
-
-  color: white;
-
-  box-shadow:
-    0 10px 30px rgba(0, 179, 255, 0.20);
+  color: #fff;
+  background: linear-gradient(135deg, #00b3ff, #007dcc);
+  box-shadow: 0 10px 30px rgba(0, 179, 255, 0.20);
 }
 
 .primary-btn:hover {
   transform: translateY(-3px);
-
-  box-shadow:
-    0 15px 35px rgba(0, 179, 255, 0.30);
+  box-shadow: 0 15px 35px rgba(0, 179, 255, 0.30);
 }
 
 .secondary-btn {
+  color: #fff;
   background: rgba(255, 255, 255, 0.03);
-
   border: 1px solid rgba(255, 255, 255, 0.18);
-
-  color: white;
-
   backdrop-filter: blur(10px);
 }
 
 .secondary-btn:hover {
   transform: translateY(-3px);
-
   background: rgba(255, 255, 255, 0.08);
-
   border-color: rgba(0, 179, 255, 0.5);
 }
 
 /* =========================================================
-   IMAGEN SEGMENTOS
+   HERO IMAGE
    ========================================================= */
 
 .segmentos-img {
   width: 100%;
   max-width: 1350px;
-
   height: auto;
-
   display: block;
 
   margin: 55px auto 0;
 
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 22px;
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
-
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 
   transition:
     transform 0.5s ease,
@@ -312,18 +273,15 @@ body {
 
 .segmentos-img:hover {
   transform: translateY(-5px);
-
-  box-shadow:
-    0 40px 100px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.55);
 }
 
 /* =========================================================
-   SECCIONES
+   GENERAL SECTIONS
    ========================================================= */
 
 section {
   position: relative;
-
   padding: 110px 8%;
 }
 
@@ -333,17 +291,6 @@ section {
   background: #f4f7fb;
 }
 
-.mission-vision {
-  background:
-    linear-gradient(
-      135deg,
-      #071522,
-      #0b2237
-    );
-
-  color: white;
-}
-
 .section-title {
   max-width: 1100px;
   margin: 0 auto 50px;
@@ -351,6 +298,7 @@ section {
 
 .section-title span {
   display: inline-block;
+
   color: #009fe3;
   font-size: 13px;
   font-weight: 800;
@@ -358,37 +306,39 @@ section {
 }
 
 .section-title h2 {
+  margin-top: 10px;
+
+  color: #142231;
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.15;
   letter-spacing: -0.8px;
-  margin-top: 10px;
-  color: #142231;
 }
 
-.mission-vision .section-title h2 {
-  color: white;
-}
-
-/* ABOUT */
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about-grid {
   max-width: 1400px;
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
 
 .about-card {
   position: relative;
-  background: white;
+  overflow: hidden;
+
+  padding: 38px;
+
+  background: #fff;
   border: 1px solid #e3eaf1;
   border-radius: 18px;
-  padding: 38px;
-  box-shadow:
-    0 12px 35px rgba(15, 42, 68, 0.06);
-  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(15, 42, 68, 0.06);
+
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -397,112 +347,101 @@ section {
 
 .about-card::before {
   content: "";
+
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    #00b3ff,
-    #0064c8
-  );
+
+  background: linear-gradient(90deg, #00b3ff, #0064c8);
 }
 
 .about-card:hover {
   transform: translateY(-8px);
-
   border-color: #c8e9f8;
-
-  box-shadow:
-    0 20px 50px rgba(15, 42, 68, 0.12);
+  box-shadow: 0 20px 50px rgba(15, 42, 68, 0.12);
 }
 
 .about-card h3 {
-  font-size: 21px;
-
   margin-bottom: 15px;
-
   color: #142231;
+  font-size: 21px;
 }
 
 .about-card p {
   color: #637180;
-  line-height: 1.7;
   font-size: 15px;
+  line-height: 1.7;
 }
 
-/* MISSION / VISION */
+/* =========================================================
+   MISSION / VISION
+   ========================================================= */
 
 .mission-vision {
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
+
+  color: #fff;
+
+  background: linear-gradient(135deg, #071522, #0b2237);
 }
 
 .mv-card {
   position: relative;
+  overflow: hidden;
 
   padding: 50px;
-  border-radius: 22px;
+
   background:
     linear-gradient(
       145deg,
-      rgba(255,255,255,0.07),
-      rgba(255,255,255,0.025)
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025)
     );
 
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
 
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.20);
-
-  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.20);
 }
 
 .mv-card::after {
   content: "";
 
   position: absolute;
+  right: -80px;
+  bottom: -80px;
 
   width: 180px;
   height: 180px;
 
-  right: -80px;
-  bottom: -80px;
-
   border-radius: 50%;
-
-  background: rgba(0,179,255,0.08);
+  background: rgba(0, 179, 255, 0.08);
 }
 
 .mv-card span {
   color: #19bdff;
-
   font-size: 13px;
-
   font-weight: 800;
-
   letter-spacing: 2px;
 }
 
 .mv-card h2 {
-  font-size: 30px;
-
-  line-height: 1.15;
-
   margin: 18px 0;
 
-  color: white;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.15;
 }
 
 .mv-card p {
   color: #b7c7d6;
-
-  line-height: 1.8;
-
   font-size: 15px;
+  line-height: 1.8;
 }
 
 /* =========================================================
@@ -518,30 +457,22 @@ section {
   margin: 0 auto;
 
   display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
 }
 
 .service-card {
   position: relative;
-
-  background: white;
-
-  border: 1px solid #dde6ee;
-
-  border-radius: 18px;
-
-  padding: 32px;
+  overflow: hidden;
 
   min-height: 270px;
+  padding: 32px;
 
-  box-shadow:
-    0 10px 30px rgba(15, 42, 68, 0.05);
+  background: #fff;
+  border: 1px solid #dde6ee;
+  border-radius: 18px;
 
-  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 42, 68, 0.05);
 
   transition:
     transform 0.3s ease,
@@ -550,36 +481,27 @@ section {
 
 .service-card:hover {
   transform: translateY(-8px);
-
-  box-shadow:
-    0 22px 45px rgba(15, 42, 68, 0.12);
+  box-shadow: 0 22px 45px rgba(15, 42, 68, 0.12);
 }
 
 .number {
-  font-size: 48px;
-
-  line-height: 1;
+  margin-bottom: 28px;
 
   color: #d9edf8;
-
+  font-size: 48px;
   font-weight: 800;
-
-  margin-bottom: 28px;
+  line-height: 1;
 }
 
 .service-card h3 {
-  font-size: 20px;
-
   margin-bottom: 14px;
-
   color: #172a3a;
+  font-size: 20px;
 }
 
 .service-card p {
   color: #687888;
-
   font-size: 14px;
-
   line-height: 1.7;
 }
 
@@ -588,7 +510,7 @@ section {
    ========================================================= */
 
 .values {
-  background: white;
+  background: #fff;
 }
 
 .values-container {
@@ -596,31 +518,20 @@ section {
   margin: 0 auto;
 
   display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
 .value-item {
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff,
-      #f5f9fc
-    );
-
-  border: 1px solid #e1eaf1;
-
-  border-radius: 16px;
-
   padding: 30px 20px;
 
   text-align: center;
 
-  box-shadow:
-    0 8px 25px rgba(15, 42, 68, 0.05);
+  background: linear-gradient(145deg, #fff, #f5f9fc);
+  border: 1px solid #e1eaf1;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(15, 42, 68, 0.05);
 
   transition:
     transform 0.3s ease,
@@ -629,281 +540,126 @@ section {
 
 .value-item:hover {
   transform: translateY(-6px);
-
   border-color: #00b3ff;
 }
 
 .value-item h3 {
-  font-size: 16px;
-
   color: #213548;
+  font-size: 16px;
 }
 
 /* =========================================================
-   CTA
+   CTA / CONTACT
    ========================================================= */
 
 .cta {
-  text-align: center;
-
   padding: 120px 8%;
+
+  text-align: center;
+  color: #fff;
 
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(0,179,255,0.18),
+      rgba(0, 179, 255, 0.18),
       transparent 40%
     ),
-    linear-gradient(
-      135deg,
-      #061522,
-      #092b45
-    );
-
-  color: white;
+    linear-gradient(135deg, #061522, #092b45);
 }
 
 .cta h2 {
   max-width: 900px;
-
   margin: 0 auto 20px;
 
+  color: #fff;
   font-size: clamp(30px, 5vw, 58px);
-
   line-height: 1.05;
-
   letter-spacing: -1.5px;
 }
 
-.cta p {
+.cta > p {
   max-width: 700px;
-
   margin: 0 auto 35px;
 
   color: #b9cad8;
-
   line-height: 1.7;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+.contact-options {
+  width: 100%;
+  max-width: 900px;
+  margin: 45px auto 0;
 
-footer {
-  padding: 35px;
-
-  text-align: center;
-
-  background: #040c14;
-
-  border-top: 1px solid rgba(255,255,255,0.08);
-
-  color: #81909e;
-
-  font-size: 13px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
-/* =========================================================
-   AVISO DE BIENVENIDA
-   ========================================================= */
-
-.welcome-toast {
-  position: fixed;
-
-  left: 50%;
-  bottom: 30px;
-
-  transform: translate(-50%, 30px);
-
-  width: min(90%, 480px);
-
+.contact-card {
   display: flex;
   align-items: center;
+  gap: 20px;
 
-  gap: 14px;
+  padding: 28px 30px;
 
-  padding: 16px 18px;
+  color: #fff;
+  text-decoration: none;
 
-  background: rgba(7, 25, 43, 0.96);
-
-  color: white;
-
-  border: 1px solid rgba(255,255,255,0.12);
-
-  border-radius: 14px;
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,0.35);
-
-  backdrop-filter: blur(15px);
-
-  opacity: 0;
-  visibility: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
 
   transition:
-    opacity 0.4s ease,
-    transform 0.4s ease,
-    visibility 0.4s;
-
-  z-index: 9999;
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.welcome-toast.show {
-  opacity: 1;
-  visibility: visible;
+.contact-card:hover {
+  transform: translateY(-6px);
 
-  transform: translate(-50%, 0);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.30);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
-.toast-icon {
-  width: 38px;
-  height: 38px;
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.10);
 
-  border-radius: 50%;
+  font-size: 28px;
+}
 
-  background: #00b3ff;
+.contact-content h3 {
+  margin: 0 0 7px;
 
-  color: white;
-
+  color: #fff;
   font-size: 20px;
-}
-
-.toast-content {
-  display: flex;
-  flex-direction: column;
-
-  gap: 4px;
-}
-
-.toast-content strong {
-  font-size: 14px;
-
   font-weight: 700;
 }
 
-.toast-content span {
-  font-size: 12px;
+.contact-content p {
+  margin: 0;
 
-  color: rgba(255,255,255,0.7);
+  color: #fff;
+  opacity: 0.75;
 
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.5;
 }
-
-.welcome-toast button {
-  margin-left: auto;
-
-  border: none;
-
-  background: transparent;
-
-  color: rgba(255,255,255,0.6);
-
-  font-size: 22px;
-
-  cursor: pointer;
-
-  line-height: 1;
-}
-
-.welcome-toast button:hover {
-  color: white;
-}
-
-/* =========================
-   CONTACTO
-========================= */
-
-.contact-options{
-  width:100%;
-  max-width:900px;
-  margin:45px auto 0;
-
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:25px;
-}
-
-
-.contact-card{
-  display:flex;
-  align-items:center;
-  gap:20px;
-
-  padding:28px 30px;
-
-  text-decoration:none;
-
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
-
-  border-radius:18px;
-
-  color:#fff;
-
-  transition:
-    transform .3s ease,
-    background .3s ease,
-    border-color .3s ease,
-    box-shadow .3s ease;
-}
-
-
-.contact-card:hover{
-  transform:translateY(-6px);
-
-  background:rgba(255,255,255,.14);
-
-  border-color:rgba(255,255,255,.30);
-
-  box-shadow:0 20px 45px rgba(0,0,0,.25);
-}
-
-
-.contact-icon{
-  width:60px;
-  height:60px;
-
-  flex-shrink:0;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:28px;
-
-  background:rgba(255,255,255,.10);
-
-  border-radius:15px;
-}
-
-
-.contact-content h3{
-  margin:0 0 7px;
-
-  font-size:20px;
-  font-weight:700;
-}
-
-
-.contact-content p{
-  margin:0;
-
-  font-size:14px;
-
-  opacity:.75;
-
-  line-height:1.5;
-}
-
 
 /* =========================================================
-   IMAGEN INFORMATIVA - QUIÉNES SOMOS
+   INFORMATION IMAGE
    ========================================================= */
 
 .section-image {
@@ -917,18 +673,31 @@ footer {
   height: auto;
   display: block;
 
+  border: 1px solid #e1e8ef;
   border-radius: 14px;
 
-  box-shadow:
-    0 15px 40px rgba(15, 42, 68, 0.12);
+  box-shadow: 0 15px 40px rgba(15, 42, 68, 0.12);
+}
 
-  border: 1px solid #e1e8ef;
+/* =========================================================
+   BRANDS / REPRESENTATIONS
+   ========================================================= */
+
+.brands {
+  background: #fff;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.brands .section-title {
+  padding: 0 8%;
+  margin-bottom: 45px;
 }
 
 .brands-carousel {
   width: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .brands-track {
@@ -942,19 +711,15 @@ footer {
 .brands-group {
   display: flex;
   align-items: center;
-
-  gap: 65px;
-
   flex-shrink: 0;
 
-  /* IMPORTANTE */
+  gap: 65px;
   padding-right: 65px;
 }
 
 .brand {
   width: 190px;
   height: 105px;
-
   flex-shrink: 0;
 
   display: flex;
@@ -963,33 +728,24 @@ footer {
 
   padding: 18px 22px;
 
-  background: #ffffff;
-
+  background: #fff;
   border: 1px solid #e1e8ef;
-
   border-radius: 14px;
 
-  box-shadow:
-    0 8px 25px rgba(15, 42, 68, 0.05);
+  box-shadow: 0 8px 25px rgba(15, 42, 68, 0.05);
 }
 
 .brand img {
+  width: auto;
+  height: auto;
   max-width: 145px;
   max-height: 65px;
 
-  width: auto;
-  height: auto;
-
+  display: block;
   object-fit: contain;
 }
 
-
-/* =========================================
-   LOOP INFINITO
-========================================= */
-
 @keyframes brandsLoop {
-
   from {
     transform: translateX(0);
   }
@@ -997,20 +753,166 @@ footer {
   to {
     transform: translateX(-50%);
   }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 35px;
+
+  text-align: center;
+
+  color: #81909e;
+  font-size: 13px;
+
+  background: #040c14;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   WELCOME TOAST
+   ========================================================= */
+
+.welcome-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  z-index: 9999;
+
+  width: min(90%, 480px);
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 18px;
+
+  color: #fff;
+
+  background: rgba(7, 25, 43, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(15px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate(-50%, 30px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0.4s;
+}
+
+.welcome-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.toast-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #00b3ff;
+
+  color: #fff;
+  font-size: 20px;
+}
+
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toast-content strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.toast-content span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.welcome-toast button {
+  margin-left: auto;
+
+  border: none;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.welcome-toast button:hover {
+  color: #fff;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    gap: 25px;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
 }
 
-
-
 /* =========================================================
-   MOBILE PEQUEÑO
+   MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
 
+  /* ---------- Base ---------- */
+
+  section {
+    padding: 65px 6%;
+  }
+
+  /* ---------- Navbar ---------- */
+
+  .navbar {
+    align-items: center;
+  }
+
   .logo {
     flex-direction: column;
-
     gap: 8px;
   }
 
@@ -1019,9 +921,8 @@ footer {
   }
 
   .tag {
-    font-size: 10px;
-
     padding: 7px 13px;
+    font-size: 10px;
   }
 
   .navbar ul {
@@ -1032,25 +933,28 @@ footer {
     font-size: 12px;
   }
 
+  /* ---------- Hero ---------- */
+
+  .hero {
+    padding: 22px 6% 55px;
+  }
+
   .hero-content {
     margin-top: 55px;
   }
 
   .hero h1 {
     font-size: 38px;
-
     line-height: 1.02;
   }
 
   .hero p {
     font-size: 15px;
-
     line-height: 1.65;
   }
 
   .hero-buttons {
     flex-direction: column;
-
     align-items: stretch;
   }
 
@@ -1060,41 +964,198 @@ footer {
 
   .segmentos-img {
     margin-top: 40px;
-
     border-radius: 10px;
   }
 
+  /* ---------- Section titles ---------- */
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
   .section-title h2 {
-    font-size: 30px;
+    margin-top: 7px;
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+  }
+
+  /* ---------- About ---------- */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .about-card {
+    padding: 25px 20px;
+  }
+
+  /* ---------- Mission / Vision ---------- */
+
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 65px 6%;
+  }
+
+  .mv-card {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .mv-card span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .mv-card h2 {
+    margin: 12px 0;
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .mv-card p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* ---------- Services ---------- */
+
+  .services {
+    padding: 65px 6%;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 23px 20px;
+    border-radius: 15px;
+  }
+
+  .number {
+    margin-bottom: 14px;
+    font-size: 32px;
+  }
+
+  .service-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ---------- Values ---------- */
+
+  .values {
+    padding: 65px 6%;
   }
 
   .values-container {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .mv-card {
-    padding: 35px 25px;
+  .value-item {
+    padding: 20px 16px;
+    border-radius: 14px;
   }
 
-  .mv-card h2 {
-    font-size: 26px;
+  .value-item h3 {
+    font-size: 15px;
   }
+
+  /* ---------- Brands ---------- */
+
+  .brands {
+    padding: 65px 0;
+  }
+
+  .brands .section-title {
+    padding: 0 6%;
+    margin-bottom: 30px;
+  }
+
+  .brands-group {
+    gap: 25px;
+    padding-right: 25px;
+  }
+
+  .brand {
+    width: 160px;
+    height: 90px;
+    padding: 15px;
+  }
+
+  .brand img {
+    max-width: 125px;
+    max-height: 55px;
+  }
+
+  /* ---------- CTA ---------- */
 
   .cta {
-    padding: 90px 6%;
+    padding: 70px 6%;
   }
 
   .cta h2 {
-    font-size: 38px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
   }
+
+  .cta > p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contact-options {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .contact-card {
+    gap: 14px;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .contact-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 21px;
+  }
+
+  .contact-content h3 {
+    margin-bottom: 4px;
+    font-size: 17px;
+  }
+
+  .contact-content p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* ---------- Toast ---------- */
 
   .welcome-toast {
     bottom: 20px;
-
     padding: 14px;
   }
 
@@ -1106,4 +1167,28 @@ footer {
     font-size: 11px;
   }
 
+  /* ---------- Footer ---------- */
+
+  footer {
+    padding: 25px 20px;
+  }
+
+}
+
+/* =========================================================
+   ACCESSIBILITY / MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
